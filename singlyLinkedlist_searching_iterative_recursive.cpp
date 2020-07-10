@@ -108,9 +108,21 @@ void print(node *head)
     }
     cout<<endl;
 }
+void buildlist(node*&head)
+{
+    int data;
+    cin>>data;
+    while(data!=-1)
+    {
+        insert_At_tail(head,data);
+        cin>>data;
+    }
+}
 int main(int argc, char **argv)
 {
 	node *head=NULL;
+    buildlist(head);
+    print(head);
 	insert_At_head(head,5);
     insert_At_head(head,7);
     insert_At_head(head,9);
